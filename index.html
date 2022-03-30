@@ -358,7 +358,9 @@
             </div>
 
             <!-- About Us -->
-            <div class="aboutUs"></div>
+            <div class="aboutUs">
+
+            </div>
         </div>
 
         <!-- Footer -->
@@ -394,7 +396,7 @@
 
                         <div class="modal-body__label--sweetWrap">
                             <div class="modal-body__label--sweet">Sweet:</div>
-                            <select class="modal-body__otps--sweet">
+                            <select class="modal-body__otps--sweet js-sweetOtps">
                                 <i class="fa-solid fa-angle-down"></i>
                                 <ul class="modal-body__otps--toppingList">
                                     <option class="modal-body__otps--toppingItems"><p>25%</p></option>
@@ -406,7 +408,7 @@
 
                         <div class="modal-body__label--iceWrap">
                             <div class="modal-body__label--ice">Ice:</div>
-                            <select class="modal-body__otps--ice">
+                            <select class="modal-body__otps--ice js-iceOtps">
                                 <i class="fa-solid fa-angle-down"></i>
                                 <ul class="modal-body__otps--toppingList">
                                     <option class="modal-body__otps--toppingItems"><p>25%</p></option>
@@ -426,6 +428,11 @@
                         <h4>Phone:</h4>
                         <input type="text" class="modal-body__numberPhone--input" placeholder="Enter your Phone">
                     </div>
+                </div>
+
+                <div class="totalPrice">
+                    <div class="totalPriceLabel">Total Price:</div>
+                    <span class="totalPriceCal js-totalPriceCal">50000</span>
                 </div>
 
                 <div class="modal-footer">
@@ -460,7 +467,42 @@
 
         modalClsoe.addEventListener('click', hiddenCustomizeOrder);
 
+
+        // Order Total Price
+        var selectElementS = document.querySelector('.js-sweetOtps');
+        var selectElementI = document.querySelector('.js-iceOtps');
+        var totalElement = document.querySelector('.js-totalPriceCal');
+
+        var currentPrice = 50000;
+        var currentPrice3;
+
+        selectElementS.onchange = function(e) {
+            var currentPrice2 = 50000;
+            if (e.target.value == '50%') {
+                totalElement.textContent = currentPrice + 10000;
+                currentPrice2 = currentPrice + 10000;
+            } else if (e.target.value == '100%') {
+                totalElement.textContent = currentPrice + 20000;
+                currentPrice2 = currentPrice + 20000;
+            } else {
+                totalElement.textContent = currentPrice;
+                currentPrice2 = currentPrice;
+            }
+            currentPrice3 = currentPrice2;
+        }
+
+        selectElementI.onchange = function(e) {
+            if (e.target.value == '50%') {
+                totalElement.textContent = currentPrice3 + 10000;
+            } else if (e.target.value == '100%') {
+                totalElement.textContent = currentPrice3 + 20000;
+            } else {
+                totalElement.textContent = currentPrice3;
+            }
+        }
+
     </script>
+    
 
 </body>
 </html>

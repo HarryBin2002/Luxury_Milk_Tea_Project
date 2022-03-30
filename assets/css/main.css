@@ -320,7 +320,7 @@
 
 
 .modal-footer {
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .modal-orderBtn {
@@ -336,6 +336,22 @@
     opacity: 0.8;
 }
 
+.totalPrice {
+    display: flex;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+
+.totalPriceLabel {
+    margin-right: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.totalPriceCal {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
 
 
 /* Sale off */
@@ -394,6 +410,8 @@
 .grid__column-25-percents--saleOff {
     width: 50%;
 }
+
+
 
 
 
