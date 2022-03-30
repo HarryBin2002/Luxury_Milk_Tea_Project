@@ -453,7 +453,7 @@
 
 .hotline:hover {
     cursor: pointer;
-
+    opacity: 0.8;
 }
 
 .hotline-icon {
