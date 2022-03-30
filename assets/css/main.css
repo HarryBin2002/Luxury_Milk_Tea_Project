@@ -411,8 +411,58 @@
     width: 50%;
 }
 
+/* About US */
+.aboutUsWrap {
+    margin-top: 50px;    
+}
 
+.aboutUsTitle {
+    color: var(--primary-color);
+    font-size: 1.4rem;
 
+}
 
+.aboutUsContents {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
 
+/* FOOTER */
+.footerWrap {
+    margin: 50px 0;
+}
+
+.footer-separate {
+    border: 2px solid var(--primary-color);
+    margin: 50px 0;
+}
+
+/* Hotline */
+.hotline {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    float: right;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 35px;
+    padding: 0 10px;
+}
+
+.hotline:hover {
+    cursor: pointer;
+
+}
+
+.hotline-icon {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+.hotline-content {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
 
