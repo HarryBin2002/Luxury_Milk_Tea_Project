@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://harrybin2002.github.io/Luxury_Milk_Tea_Project/assets/css/main.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
     <div class="app">
@@ -35,6 +36,7 @@
                     <a href="" class="navigation-connect__items"><i class="fa-brands fa-instagram"></i></a>
                     <a href="" class="navigation-connect__items"><i class="fa-brands fa-youtube"></i></a>
                     <a href="" class="navigation-connect__items"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="navigation-connect__items js-user"><i class="fa-solid fa-user"></i></a>
                 </div>
 
             </div>
@@ -496,14 +498,47 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal Login -->
+        <div class="modal__logIn js-modal__logIn">
+            <div class="modal__logIn-container">
+                <div class="modal__logIn-header">
+                    <div class="modal__logIn-header--lable">
+                        log In
+                    </div>
+                    <div class="modal__logIn-close js-modal__logIn-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+    
+                <div class="modal__logIn-body">
+                    <div class="modal__logIn-body--userName">
+                        User Name:
+                        <input type="text" class="modal__logIn-body--input" placeholder="Enter your User Name">
+                    </div>
+    
+                    <div class="modal__logIn-body--password">
+                        Password:
+                        <input type="password" class="modal__logIn-body--input" placeholder="Enter your password">
+                    </div>
+                </div>
+
+                <div class="modal__logIn-footer">
+                    <button class="modal__logIn-logInBtn">
+                        Log In
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     
+
     <!-- Javascript Order -->
     <script>
         const orderBtns = document.querySelectorAll('.js-order');
-        const modalClsoe = document.querySelector('.js-modalClose');
+        const modalClose = document.querySelector('.js-modalClose');
 
-        const modal =  document.querySelector('.js-modal');
+        const modal = document.querySelector('.js-modal');
 
         // showCustomizeOrder function
         function showCustomizeOrder() {
@@ -519,7 +554,7 @@
             modal.classList.remove('open');
         }
 
-        modalClsoe.addEventListener('click', hiddenCustomizeOrder);
+        modalClose.addEventListener('click', hiddenCustomizeOrder);
 
 
         // Order Total Price
@@ -554,6 +589,29 @@
                 totalElement.textContent = currentPrice3;
             }
         }
+
+    </script>
+
+    <!-- Javascript Log In form -->
+    <script>
+        const userBtn = document.querySelector('.js-user');
+        const closeLogInBtn = document.querySelector('.js-modal__logIn-close');
+
+        const modalLogIn = document.querySelector('.js-modal__logIn');
+
+        // Show Log In form 
+        function showLogInForm() {
+            modalLogIn.classList.add('open');
+        }
+
+        userBtn.addEventListener('click', showLogInForm);
+
+        // Hidden Log In form
+        function hiddenLogInForm() {
+            modalLogIn.classList.remove('open');
+        }
+
+        closeLogInBtn.addEventListener('click', hiddenLogInForm);
 
     </script>
     

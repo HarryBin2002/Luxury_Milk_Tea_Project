@@ -1,5 +1,4 @@
 
-
 /* Header */
 .header {
     height: 100px;
@@ -334,6 +333,112 @@
     cursor: pointer;
     opacity: 0.8;
 }
+
+/* Modal Log In */
+.modal__logIn {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal__logIn.open {
+    display: block;
+}
+
+.modal__logIn-container {
+    position: relative;
+    background-color: var(--white-color);
+    width: 600px;
+    min-height: 200px;
+    margin-left: 25%;
+    margin-top: 12.5%;
+    padding: 10px;
+}
+
+.modal__logIn-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px; 
+    /* padding: 10px; */
+    background-color: var(--primary-color);
+}
+
+.modal__logIn-header--lable {
+    padding: 10px;
+    margin-left: 250px;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.modal__logIn-close {
+    padding: 10px 15px;
+    color: var(--white-color);
+
+}
+
+.modal__logIn-close:hover {
+    cursor: pointer;
+    /* opacity: 0.9; */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--black-color);
+}
+
+.modal__logIn-body {
+    
+    margin: 50px 0;
+}
+
+.modal__logIn-body--userName,
+.modal__logIn-body--password {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+    line-height: 40px;
+}
+
+.modal__logIn-body--userName {
+}
+
+.modal__logIn-body--password {
+}
+
+.modal__logIn-body--input {
+    width: 80%;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid var(--black-color);
+}
+
+.modal__logIn-footer {
+    margin: 10px 169px;
+}
+
+.modal__logIn-logInBtn {
+    padding: 10px 100px;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    color: var(--white-color);
+
+}
+
+.modal__logIn-logInBtn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
 
 .totalPrice {
     display: flex;
